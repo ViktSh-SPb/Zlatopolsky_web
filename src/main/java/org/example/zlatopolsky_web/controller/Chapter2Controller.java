@@ -204,4 +204,19 @@ public class Chapter2Controller {
         model.addAttribute("x", chapter2Service.getLesson13Root(a, b));
         return "chapter2/2.13_result";
     }
+
+    @GetMapping("/lesson14")
+    public String getLesson14Page(){
+        return "chapter2/2.14";
+    }
+
+    @PostMapping("/lesson14")
+    public String getLesson14ResultPage(Model model,
+                                        @RequestParam("katet1") Integer katet1,
+                                        @RequestParam("katet2") Integer katet2){
+        model.addAttribute("katet1", katet1);
+        model.addAttribute("katet2", katet2);
+        model.addAttribute("hyp", chapter2Service.getLesson14Hypotenuse(katet1, katet2));
+        return "chapter2/2.14_result";
+    }
 }

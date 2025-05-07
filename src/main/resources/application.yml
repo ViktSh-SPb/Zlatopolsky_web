@@ -1,6 +1,6 @@
 spring:
   application:
-    name=Zlatopolsky_web
+    name: Zlatopolsky_web
 
 server:
-  port: 8080
+  port: 10000

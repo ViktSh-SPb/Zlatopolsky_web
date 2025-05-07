@@ -68,6 +68,7 @@ public class Chapter2Service {
 
     public Object getLesson12Density(Integer citizens, Integer s) { return (double)citizens/s; }
 
-    public Object getLesson13Root(Integer a, Integer b) { return (double)-b/a;
+    public Object getLesson13Root(Integer a, Integer b) { return (double)-b/a;}
+
+    public Object getLesson14Hypotenuse(Integer katet1, Integer katet2) { return Math.sqrt(Math.pow(katet1,2)+Math.pow(katet2, 2));}
     }
-}
