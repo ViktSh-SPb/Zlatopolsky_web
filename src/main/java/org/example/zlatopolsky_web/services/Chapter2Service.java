@@ -26,7 +26,7 @@ public class Chapter2Service {
     }
 
     public Integer getLesson6Result(Integer h){
-        final Integer R = 6350000;
+        final int R = 6350000;
         return (int)Math.round(Math.sqrt(2*R*h));
     }
 
