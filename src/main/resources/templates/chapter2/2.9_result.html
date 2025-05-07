@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://thymeleaf.org"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://thymeleaf.org ">
+<head>
+    <meta charset="UTF-8">
+    <title>2.9</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+<h3>2.9 Составить программу:</h3>
+<p>
+    а) вычисления значения функции \(z = 2x^3-3,44xy+2,3x^2-7,1y+2\) при любых значениях <b>х</b> и <b>y</b>;
+</p>
+<p>
+    б) вычисления значения функции \(x=3,14(a+b)^3+2,75b^2-12,7a-4,1\) при любых значениях <b>а</b> и <b>b</b>.
+</p>
+<hr>
+<div>[[${'x: '+x}]]&emsp;[[${'y: '+y}]]&emsp;[[${'a: '+a}]]&emsp;[[${'b: '+b}]]</div>
+<hr>
+<p>
+    $$ a) z = 2*[[${x}]]^3-3,44*[[${x}]]*[[${y}]]+2,3*[[${x}]]^2-7,1*[[${y}]]+2 = [[${return_z}]]$$
+</p>
+<p>
+    $$ б) x=3,14([[${a}]]+[[${b}]])^3+2,75*[[${b}]]^2-12,7*[[${a}]]-4,1 = [[${return_x}]]$$
+</p>
+<hr>
+
+<form action="/">
+    <button>Назад</button>
+</form>
+</body>
+</html>

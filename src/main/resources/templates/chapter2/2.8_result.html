@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://thymeleaf.org"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://thymeleaf.org ">
+<head>
+    <meta charset="UTF-8">
+    <title>2.8</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <script type="application/javascript">
+        function draw() {
+            const canvas = document.getElementById("canvas");
+            if (canvas.getContext) {
+                const ctx = canvas.getContext("2d");
+                ctx.fillStyle = "LightGreen";
+
+                ctx.lineWidth = 1;
+                ctx.beginPath();
+                ctx.arc(75, 75, 60, 0, Math.PI * 2, true);
+                ctx.fill();
+                ctx.strokeStyle ="rgb(0,0,0)";
+                ctx.moveTo(15,75);
+                ctx.lineTo(135, 75);
+                ctx.moveTo(135, 65);
+                ctx.lineTo(135, 85);
+                ctx.moveTo(75, 65);
+                ctx.lineTo(75, 75);
+                ctx.moveTo(15, 75);
+                ctx.lineTo(15, 85);
+                ctx.stroke();
+                ctx.closePath();
+
+                ctx.beginPath();
+                ctx.strokeStyle ="rgb(255,0,0)";
+
+                ctx.moveTo(75, 70);
+                ctx.lineTo(135, 70);
+
+                ctx.moveTo(83, 65);
+                ctx.lineTo(75, 70);
+                ctx.lineTo(83, 75);
+                ctx.moveTo(127, 65);
+                ctx.lineTo(135, 70);
+                ctx.lineTo(127, 75);
+                ctx.moveTo(145, 75);
+                //красный круг
+                ctx.arc(75, 75, 70, 0, Math.PI * 2, true);
+                //стрелки на круге
+                ctx.moveTo(139, 65);
+                ctx.lineTo(145, 75);
+                ctx.lineTo(149, 65);
+                ctx.moveTo(139, 85);
+                ctx.lineTo(145,75);
+                ctx.lineTo(149, 85);
+                ctx.moveTo(135, 75);
+                ctx.lineTo(150, 75);
+                ctx.fillStyle="Red";
+                ctx.font = "20px serif";
+                ctx.textAlign = "center";
+                ctx.textBaseline = "middle";
+                ctx.fillText([[${r}]], 105, 60);
+                ctx.fillText("S = "+[[${#numbers.formatDecimal(s, 0, 'COMMA', 3, 'POINT')}]], 75, 90);
+                ctx.textAlign = "left";
+                ctx.textBaseline = "bottom";
+                ctx.fillText("C = "+[[${#numbers.formatDecimal(c, 0, 'COMMA', 3, 'POINT')}]], 145, 60);
+                ctx.stroke();
+            }
+        }
+    </script>
+</head>
+<body onload="draw();">
+<h3>2.8 Дан радиус окружности. Найти длину окружности и площадь круга</h3>
+<hr>
+<div>[[${'Радиус: '+r}]]</div>
+<hr>
+<canvas id="canvas"></canvas>
+<p>
+    Длина окружности равна: [[${#numbers.formatDecimal(c, 0, 'COMMA', 3, 'POINT')}]]
+</p>
+<p>
+    Площадь круга равна: [[${#numbers.formatDecimal(s, 0, 'COMMA', 3, 'POINT')}]]
+</p>
+<hr>
+
+<form action="/">
+    <button>Назад</button>
+</form>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://thymeleaf.org"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://thymeleaf.org ">
+<head>
+    <meta charset="UTF-8">
+    <title>2.11</title>
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+<h3>2.11 Известны объем и масса тела. Определить плотность материала этого тела.</h3>
+<hr>
+<div>[[${'Объем: '+v}]]&emsp;[[${'Масса тела: '+m}]]</div>
+<hr>
+<p>
+    Плотность материала тела: [[${#numbers.formatDecimal(density, 1, 'COMMA', 3, 'POINT')}]]
+</p>
+<hr>
+
+<form action="/">
+    <button>Назад</button>
+</form>
+</body>
+</html>
