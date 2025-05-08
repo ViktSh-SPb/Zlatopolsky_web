@@ -236,4 +236,19 @@ public class Chapter2Controller {
         System.out.println(chapter2Service.getLesson15RelRadius(inner, outer));
         return "chapter2/2.15_result";
     }
+
+    @GetMapping("/lesson16")
+    public String getLesson16age(){
+        return "chapter2/2.16";
+    }
+
+    @PostMapping("/lesson16")
+    public String getLesson16ResultPage(Model model,
+                                        @RequestParam("katet1") Integer katet1,
+                                        @RequestParam("katet2") Integer katet2){
+        model.addAttribute("katet1", katet1);
+        model.addAttribute("katet2", katet2);
+        model.addAttribute("perimeter", chapter2Service.getLesson16Perimeter(katet1, katet2));
+        return "chapter2/2.16_result";
+    }
 }

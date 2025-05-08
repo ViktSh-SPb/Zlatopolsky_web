@@ -75,4 +75,8 @@ public class Chapter2Service {
     public Double getLesson15S(Integer inner, Integer outer) { return Math.PI*(Math.pow(outer, 2)-Math.pow(inner, 2));}
 
     public Double getLesson15RelRadius(Integer inner, Integer outer) { return 150.0/outer*inner;}
+
+    public Double getLesson16Perimeter(Integer katet1, Integer katet2) {
+        double hypotenuse = Math.sqrt(Math.pow(katet1,2)+Math.pow(katet2, 2));
+        return katet1+katet2+hypotenuse;}
     }

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>2.16</title>
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+<h3>2.16 Даны катеты прямоугольного треугольника. Найти его периметр.</h3>
+<hr>
+<form th:method="POST" th:action="@{/chapter2/lesson16}">
+    <span>Введите значения: </span>&emsp;
+    <label for="katet1"><b>Первый катет: </b></label>
+    <input type="text" id="katet1" name="katet1" size="10">&emsp;
+    <label for="katet2"><b>Второй катет: </b></label>
+    <input type="text" id="katet2" name="katet2" size="10">&emsp;
+    <input type="submit" value="Вывести">
+</form>
+<hr>
+<form action="/">
+    <button>Назад</button>
+</form>
+</body>
+</html>
