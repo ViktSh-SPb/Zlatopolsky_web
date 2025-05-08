@@ -35,12 +35,12 @@ public class Chapter2Controller {
     }
 
     @GetMapping("/lesson2")
-    public String getLesson17Page(){
+    public String getLesson2Page(){
         return "chapter2/2.2";
     }
 
     @PostMapping("/lesson2")
-    public String getLesson17ResultPage(Model model, @RequestParam("a") Integer a){
+    public String getLesson2ResultPage(Model model, @RequestParam("a") Integer a){
         model.addAttribute("a", a);
         model.addAttribute("result", chapter2Service.getLesson2Result(a));
         return "chapter2/2.2_result";
@@ -238,7 +238,7 @@ public class Chapter2Controller {
     }
 
     @GetMapping("/lesson16")
-    public String getLesson16age(){
+    public String getLesson16Page(){
         return "chapter2/2.16";
     }
 
@@ -250,5 +250,22 @@ public class Chapter2Controller {
         model.addAttribute("katet2", katet2);
         model.addAttribute("perimeter", chapter2Service.getLesson16Perimeter(katet1, katet2));
         return "chapter2/2.16_result";
+    }
+
+    @GetMapping("/lesson17")
+    public String getLesson17Page(){
+        return "chapter2/2.17";
+    }
+
+    @PostMapping("/lesson17")
+    public String getLesson17ResultPage(Model model,
+                                        @RequestParam("base1") Integer base1,
+                                        @RequestParam("base2") Integer base2,
+                                        @RequestParam("height") Integer height){
+        model.addAttribute("base1", base1);
+        model.addAttribute("base2", base2);
+        model.addAttribute("height", height);
+        model.addAttribute("perimeter", chapter2Service.getLesson17Perimeter(base1, base2, height));
+        return "chapter2/2.17_result";
     }
 }

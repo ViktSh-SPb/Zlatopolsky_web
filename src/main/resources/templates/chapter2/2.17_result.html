@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>2.17</title>
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+<h3>2.17 Даны основания и высота равнобедренной трапеции. Найдите ее периметр.</h3>
+<hr>
+<div>[[${'Первое основание: '+base1}]]&emsp;[[${'Второе основание: '+base2}]]&emsp;[[${'Высота: '+height}]]</div>
+<hr>
+<p>
+    Периметр: [[${#numbers.formatDecimal(perimeter, 1, 'COMMA', 3, 'POINT')}]]
+</p>
+<hr>
+<form action="/">
+    <button>Назад</button>
+</form>
+</body>
+</html>

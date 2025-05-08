@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>2.17</title>
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+<h3>2.17 Даны основания и высота равнобедренной трапеции. Найдите ее периметр.</h3>
+<hr>
+<form th:method="POST" th:action="@{/chapter2/lesson17}">
+    <span>Введите значения: </span>&emsp;
+    <label for="base1"><b>Первое основание: </b></label>
+    <input type="text" id="base1" name="base1" size="10">&emsp;
+    <label for="base2"><b>Второе основание: </b></label>
+    <input type="text" id="base2" name="base2" size="10">&emsp;
+    <label for="height"><b>Высота: </b></label>
+    <input type="text" id="height" name="height" size="10">&emsp;
+    <input type="submit" value="Вывести">
+</form>
+<hr>
+<form action="/">
+    <button>Назад</button>
+</form>
+</body>
+</html>

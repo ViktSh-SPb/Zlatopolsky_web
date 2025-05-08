@@ -79,4 +79,13 @@ public class Chapter2Service {
     public Double getLesson16Perimeter(Integer katet1, Integer katet2) {
         double hypotenuse = Math.sqrt(Math.pow(katet1,2)+Math.pow(katet2, 2));
         return katet1+katet2+hypotenuse;}
+
+    public Double getLesson17Perimeter(Integer base1, Integer base2, Integer height) {
+        int katet1=height;
+        double katet2 =(double)Math.abs(base1 - base2) / 2;
+        System.out.println(katet2);
+        double hyp = Math.sqrt(Math.pow(katet1,2)+Math.pow(katet2,2));
+        return hyp*2+base1+base2;
     }
+
+}
