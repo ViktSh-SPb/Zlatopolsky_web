@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>2.15</title>
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+<h3>2.15 Найти площадь кольца по заданным внешнему и внутреннему радиусу.</h3>
+<hr>
+<form th:method="POST" th:action="@{/chapter2/lesson15}">
+    <span>Введите значения: </span>&emsp;
+    <label for="inner"><b>Внутренний радиус: </b></label>
+    <input type="text" id="inner" name="inner" size="10">&emsp;
+    <label for="outer"><b>Внешний радиус: </b></label>
+    <input type="text" id="outer" name="outer" size="10">&emsp;
+    <input type="submit" value="Вывести">
+</form>
+<hr>
+<form action="/">
+    <button>Назад</button>
+</form>
+</body>
+</html>

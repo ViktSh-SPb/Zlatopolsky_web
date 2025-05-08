@@ -66,9 +66,13 @@ public class Chapter2Service {
 
     public Double getLesson11Density(Integer v, Integer m) { return (double)m/v; }
 
-    public Object getLesson12Density(Integer citizens, Integer s) { return (double)citizens/s; }
+    public Double getLesson12Density(Integer citizens, Integer s) { return (double)citizens/s; }
 
-    public Object getLesson13Root(Integer a, Integer b) { return (double)-b/a;}
+    public Double getLesson13Root(Integer a, Integer b) { return (double)-b/a;}
 
-    public Object getLesson14Hypotenuse(Integer katet1, Integer katet2) { return Math.sqrt(Math.pow(katet1,2)+Math.pow(katet2, 2));}
+    public Double getLesson14Hypotenuse(Integer katet1, Integer katet2) { return Math.sqrt(Math.pow(katet1,2)+Math.pow(katet2, 2));}
+
+    public Double getLesson15S(Integer inner, Integer outer) { return Math.PI*(Math.pow(outer, 2)-Math.pow(inner, 2));}
+
+    public Double getLesson15RelRadius(Integer inner, Integer outer) { return 150.0/outer*inner;}
     }

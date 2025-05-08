@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>2.15</title>
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+<h3>2.15 Найти площадь кольца по заданным внешнему и внутреннему радиусу.</h3>
+<hr>
+<div>[[${'Внутренний радиус: '+inner}]]&emsp;[[${'Внешний радиус: '+outer}]]</div>
+<hr>
+<p>
+    Площадь кольца: [[${#numbers.formatDecimal(s, 1, 'COMMA', 3, 'POINT')}]]
+</p>
+<hr>
+<form action="/">
+    <button>Назад</button>
+</form>
+<svg width="400" height="400" viewBox="-200 -200 400 400">
+    <!-- Тор (кольцо) -->
+    <circle cx="0" cy="0" r="150" fill="lightblue" stroke="blue" stroke-width="2"/>
+    <circle cx="0" cy="0" th:attr="r=${relInner}" fill="white" stroke="blue" stroke-width="2"/>
+
+    <!-- Подписи радиусов -->
+    <text x="160" y="-10" font-size="14">[[${'R = '+outer}]]</text>
+    <text th:attr="x=${relInner}+10" y="10" font-size="14">[[${'r = '+inner}]]</text>
+
+</svg>
+</body>
+</html>
