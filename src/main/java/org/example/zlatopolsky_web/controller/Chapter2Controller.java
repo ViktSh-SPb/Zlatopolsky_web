@@ -268,4 +268,20 @@ public class Chapter2Controller {
         model.addAttribute("perimeter", chapter2Service.getLesson17Perimeter(base1, base2, height));
         return "chapter2/2.17_result";
     }
+
+    @GetMapping("/lesson18")
+    public String getLesson18Page(){
+        return "chapter2/2.18";
+    }
+
+    @PostMapping("/lesson18")
+    public String getLesson18ResultPage(Model model,
+                                        @RequestParam("x") Integer x,
+                                        @RequestParam("y") Integer y){
+        model.addAttribute("x", x);
+        model.addAttribute("y", y);
+        model.addAttribute("z", chapter2Service.getLesson18z(x, y));
+        model.addAttribute("q", chapter2Service.getLesson18q(x, y));
+        return "chapter2/2.18_result";
+    }
 }

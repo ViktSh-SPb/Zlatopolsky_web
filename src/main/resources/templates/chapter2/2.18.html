@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>2.18</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+<h3>2.18 Составить программу вычисления значений функции \(z=\frac{x+\frac{2+y}{x^2}}{y+\frac{1}{\sqrt{x^2+10}}}\) и \(q=7,25sin x-|y|\).</h3>
+<hr>
+<form th:method="POST" th:action="@{/chapter2/lesson18}">
+    <span>Введите значения: </span>&emsp;
+    <label for="x"><b>x: </b></label>
+    <input type="text" id="x" name="x" size="10">&emsp;
+    <label for="y"><b>y: </b></label>
+    <input type="text" id="y" name="y" size="10">&emsp;
+    <input type="submit" value="Вывести">
+</form>
+<hr>
+<form action="/">
+    <button>Назад</button>
+</form>
+</body>
+</html>

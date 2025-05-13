@@ -88,4 +88,10 @@ public class Chapter2Service {
         return hyp*2+base1+base2;
     }
 
+    public Double getLesson18z(Integer intx, Integer inty) {
+        double x = (double) intx;
+        double y = (double) inty;
+        return (x+((2+y)/(x*x)))/(y+(1/(Math.sqrt(x*x+10))));}
+
+    public Double getLesson18q(Integer x, Integer y) { return 7.25*Math.sin(x)-Math.abs(y);}
 }
