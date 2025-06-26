@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>2.19</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+<h3>2.19 Составить программу рассчета значений функций \(x=\frac{\frac{2}{a^2+25}+b}{\sqrt{b}+\frac{a+b}{2}}\) и \(y=\frac{|a|+2\sin{b}}{5,5a}\) при любых значениях <i>x</i> и <i>y</i>.</h3>
+<hr>
+<div>[[${'x: '+x}]]&emsp;[[${'y: '+y}]]</div>
+<hr>
+<p>
+    z: [[${#numbers.formatDecimal(z, 1, 'COMMA', 3, 'POINT')}]]&emsp;q: [[${#numbers.formatDecimal(q, 1, 'COMMA', 3, 'POINT')}]]
+</p>
+<hr>
+<form action="/">
+    <button>Назад</button>
+</form>
+</body>
+</html>
