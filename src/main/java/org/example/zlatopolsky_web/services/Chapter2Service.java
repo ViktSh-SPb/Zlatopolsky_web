@@ -94,4 +94,8 @@ public class Chapter2Service {
         return (x+((2+y)/(x*x)))/(y+(1/(Math.sqrt(x*x+10))));}
 
     public Double getLesson18q(Integer x, Integer y) { return 7.25*Math.sin(x)-Math.abs(y);}
+
+    public Double getLesson19x(Integer a, Integer b) {return (2/(a*a+25)+b)/(Math.sqrt(b)+((a+b)/2));}
+
+    public Double getLesson19y(Integer a, Integer b) { return (Math.abs(a)+2*Math.sin(b))/(5.5*a);}
 }

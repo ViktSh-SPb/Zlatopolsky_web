@@ -284,4 +284,20 @@ public class Chapter2Controller {
         model.addAttribute("q", chapter2Service.getLesson18q(x, y));
         return "chapter2/2.18_result";
     }
+
+    @GetMapping("/lesson19")
+    public String getLesson19Page(){
+        return "chapter2/2.19";
+    }
+
+    @PostMapping("/lesson19")
+    public String getLesson19ResultPage(Model model,
+                                        @RequestParam("a") Integer a,
+                                        @RequestParam("b") Integer b){
+        model.addAttribute("a", a);
+        model.addAttribute("b", b);
+        model.addAttribute("x", chapter2Service.getLesson19x(a, b));
+        model.addAttribute("y", chapter2Service.getLesson19y(a, b));
+        return "chapter2/2.19_result";
+    }
 }
