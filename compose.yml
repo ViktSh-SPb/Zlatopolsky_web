@@ -1,4 +1,4 @@
-service:
+services:
   app:
     image: ghcr.io/viktsh-spb/zlatopolsky_web:latest
     container_name: spring-app
