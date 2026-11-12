@@ -1,6 +1,6 @@
-FROM openjdk:17
-LABEL authors="Viktor"
+FROM eclipse-temurin:17-jre
+LABEL authors="Viktor Shvidkiy"
 WORKDIR /app
-COPY target/Zlatopolsky_web-0.0.1-SNAPSHOT.jar /app/Zlatopolsky_web-0.0.1-SNAPSHOT.jar
-EXPOSE 10000/TCP
-CMD ["java", "-jar", "Zlatopolsky_web-0.0.1-SNAPSHOT.jar"]
+COPY target/*.jar app.jar
+EXPOSE 10000
+ENTRYPOINT ["java", "-jar", "app.jar"]
